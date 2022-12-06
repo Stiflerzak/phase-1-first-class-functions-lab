@@ -15,7 +15,19 @@ function  returnLastTwoDrivers() {
    
    returnLastTwoDrivers()
 
-   function selectingDrivers(){
-
-   }
+ const selectingDrivers= [returnFirstTwoDrivers,returnLastTwoDrivers]
    
+ const createFareMultiplier= function(distance){
+    return function (unitprice){
+return distance * unitprice;
+    }
+ }
+ 
+
+const fareDoubler= createFareMultiplier(2);
+const fareTripler= createFareMultiplier(3);
+
+
+function selectDifferentDrivers(arrayOfDrivers, returnFirstTwoDrivers){
+    return returnFirstTwoDrivers(drivers)
+}
